@@ -26,6 +26,9 @@ public:
 
 protected:
     void paintEvent(QPaintEvent* event);
+
+private:
+    float scaleFactor;
 };
 
 #endif //FIELD_VIEW_H
