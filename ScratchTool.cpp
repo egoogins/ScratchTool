@@ -20,12 +20,14 @@ ScratchTool::ScratchTool() : QMainWindow(),
 MainWidget::MainWidget(QWidget *parent) : QWidget(parent)
 {
     QWidget* fieldMaps = new QWidget(this);
-    QVBoxLayout* fieldsLayout = new QVBoxLayout(this);
+    QVBoxLayout* fieldLayout = new QVBoxLayout(this);
 
-    QLabel* label = new QLabel(tr("Love You Kasey!")) ;
+    field = new FieldView();
+    QLabel* fieldLabel = new QLabel(tr("Field View"));
+    fieldLayout->addWidget(fieldLabel);
+    fieldLayout->addWidget(field);
 
-    fieldsLayout->addWidget(label);
-    fieldMaps->setLayout(fieldsLayout);
+    fieldMaps->setLayout(fieldLayout);
 
     QHBoxLayout* mainLayout = new QHBoxLayout(this);
 

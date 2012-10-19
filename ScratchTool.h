@@ -9,6 +9,7 @@
 #define SCRATCHTOOL_H
 
 #include <qmainwindow.h>
+#include "FieldView.h"
 
 class MainWidget;
 
@@ -31,6 +32,9 @@ public:
     MainWidget(QWidget *parent = 0);
     ~MainWidget() {};
 
+private:
+    // Main GUI components
+    FieldView* field;
 };
 
 #endif //SCRATCHTOOL_H
