@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ScratchTool.h'
 **
-** Created: Mon Oct 22 16:12:23 2012
+** Created: Mon Oct 22 17:28:03 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -84,7 +84,7 @@ static const uint qt_meta_data_MainWidget[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -93,12 +93,14 @@ static const uint qt_meta_data_MainWidget[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x09,
+      36,   11,   11,   11, 0x09,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWidget[] = {
-    "MainWidget\0\0handleButton()\0"
+    "MainWidget\0\0previousButtonClicked()\0"
+    "nextButtonClicked()\0"
 };
 
 void MainWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -107,7 +109,8 @@ void MainWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_ASSERT(staticMetaObject.cast(_o));
         MainWidget *_t = static_cast<MainWidget *>(_o);
         switch (_id) {
-        case 0: _t->handleButton(); break;
+        case 0: _t->previousButtonClicked(); break;
+        case 1: _t->nextButtonClicked(); break;
         default: ;
         }
     }
@@ -146,9 +149,9 @@ int MainWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

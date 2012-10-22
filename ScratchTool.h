@@ -10,6 +10,7 @@
 
 #include <qmainwindow.h>
 #include <QPushButton>
+#include <QToolBar>
 #include "FieldView.h"
 
 class MainWidget;
@@ -22,8 +23,11 @@ public:
     ScratchTool();
     ~ScratchTool() {};
 
-private:
+protected:
     MainWidget *central;
+    QToolBar *toolbar;
+    QPushButton *previousButton;
+    QPushButton *nextButton;
 };
 
 class MainWidget : public QWidget {
@@ -34,15 +38,13 @@ public:
     ~MainWidget() {};
 
 protected slots:
-    void handleButton();
+    void previousButtonClicked();
+    void nextButtonClicked();
 
 protected:
     // Main GUI components
     FieldView* field;
 
-    // QButtons...
-    QPushButton *next;
-    QPushButton *previous;
 };
 
 #endif //SCRATCHTOOL_H
