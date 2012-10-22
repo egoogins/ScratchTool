@@ -9,6 +9,7 @@
 #define SCRATCHTOOL_H
 
 #include <qmainwindow.h>
+#include <QPushButton>
 #include "FieldView.h"
 
 class MainWidget;
@@ -32,9 +33,16 @@ public:
     MainWidget(QWidget *parent = 0);
     ~MainWidget() {};
 
-private:
+protected slots:
+    void handleButton();
+
+protected:
     // Main GUI components
     FieldView* field;
+
+    // QButtons...
+    QPushButton *next;
+    QPushButton *previous;
 };
 
 #endif //SCRATCHTOOL_H
